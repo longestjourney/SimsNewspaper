@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My first webside</title>
+        <!-- Wewnętrznie w danym pliku dodawanie elementu styl
+         musi być tutaj w head -->
+        <style>
+
+            h1{
+                color: yellow;
+            }
+        </style>
+        <!-- Korzystanie z oddzielnego pliku do css-->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1 id="myH1">This is an h1 heading</h1>
+        <h2 id="myH2">My text</h2>
+        <button id="myButton">My Button</button>
+        <input type="text" id="myText">
+
+        <br>
+        <div id="buttoncontainer">
+            <br>
+            <label id="counter">0</label> <br>
+            <button id="minus" class="numberbuttons">-</button>
+            <button id="resetb" class="numberbuttons">0</button>
+            <button id="plus" class="numberbuttons">+</button>
+        </div>
+
+
+        <!--Unordered list - czyli takie ze przy elementach beda kropki-->
+        <h4>Groceries</h4>
+        <ul>
+            <li>milk</li>
+            <li>coffee supplies</li>
+            <ul>
+                <li>coffee beans</li>
+                <li>sugar</li>
+            </ul>
+        </ul>
+
+        <!--  Ordered list - czyli takie ze przy elementach beda po kolei liczby  -->
+        <h4>To do list</h4>
+        <ol>
+            <li>Wake Up</li>
+            <li>Walk the dog</li>
+        </ol>
+
+        <h3>Store Hours</h3>
+        <!--Tworzenie tabeli-->
+        <table border="1">
+            <!--Elementy stylu to elementy css-->
+            <!-- Kolejne wiersze-->
+            <tr align="center">
+                <!-- Kolejne kolumny z pogrubieniem-->
+                <th>Monday</th>
+                <th>Tusday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+                <th>Sunday</th>
+            </tr>
+            <tr align="right">
+               <!-- Kolejne kolumny w zwykłym tekscie--> 
+                <td>9-5</td>
+                <td>9-5</td>
+                <td>9-5</td>
+                <td>9-5</td>
+                <td>9-5</td>
+                <td>9-5</td>
+                <td>Closed</td>
+            </tr>
+        </table>
+        <a target="_blank" href="page2.html">
+            <!-- Wszystko co jest w tym przycisku to css choć dosyć brzydko to wyglada i normalnie stosuje się inne
+             sposoby - daje się wydzielone miejsce na css
+             tego typu css nazywa się inline-->
+            <button onclick="DoSomthing()" style="font-size:25px; background-color: blue; color: aqua; border-radius: 20px;">click me</button>
+        </a>
+        <p id="Greetings">Hello</p>
+        <!-- W ten sposób wydzielamy miejsce na skrypty javascript
+         Wywołanie tej funkcji zapisaliśmy w przycisku przy akcji onclick 
+        
+         -->
+         <script src="index.js"></script>
+        <script>
+            function DoSomthing(){
+                document.getElementById("Greetings").innerHTML = "Goodbye";
+            }
+        </script>
+
+
+        <!-- Formularze potrzebują backendu z methodą POST-->
+        <form action="index.php" method="post">
+            <label for="username">username:</label>
+            <input type="text" id="username" required>
+            <input type="reset"><br>
+            <input type="submit">
+        </form>
+
+
+        <!-- GET - pobierz element-->
+        <!--POST - tworzy nowy element-->
+        <!--PUT - aktualizuje lub podmienia istniejący element-->
+
+
+        <p id="p1" class="odd">
+            Aby zrobić żeby każdy paragraf był w innym kolorze
+            <br>
+            Trzeba dodać w tym p id, aby można było.
+        </p>
+        <p id="p2" class="even">
+            wiedzieć do którego się odnosi <br>
+            Natomiast w pliku css do id odnosi się #p1, #p2
+        </p>
+        <p id="p3" class="odd">
+            Ale istnieje jeszcze odwołanie do class<br>
+            W css odwołamy się do klasy .odd .even itd
+        </p>
+        <p>Plusem oddzielnych plikow z css jest to że można ich używać dla wielu stron/podstron</p>
+        <div id="container">
+
+            <!-- 
+            Descendant #container p - obejmuje wszystkie p wewnątrz
+            Child  #container > p - obejmuje tylko tych w pierwszej głębokości - nie głębiej (czyli ten kolejny div już nie)
+            
+            -->
+            <p>This is one</p>
+            <p>This is two</p>
+            <div>
+                <p>This is 3</p>
+            </div>
+        </div>
+        <p>This is four</p>
+    </body>
+
+    <!--
+    Typowy podział w htmlu na nawigacje w elementach strony
+    <header>
+    <nav>
+    <main>
+    <section>
+    <aside>
+    <article>
+    <footer>
+    
+    -->
+</html>

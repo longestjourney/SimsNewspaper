@@ -1,0 +1,69 @@
+body{
+    background-color: wheat;
+}
+h1{
+    color: green;
+}
+h1::first-letter{
+    font-size: 2em;
+    font-style: italic;
+}
+p::selection{
+    color: darkcyan;
+    background-color: fuchsia;
+}
+#p1{
+    color:brown
+}
+#p1::first-line{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#p2{
+    color: blue;
+}
+
+.odd{
+ background-color: yellow;
+ margin: 10px
+}
+.even{
+    background-color: chartreuse;
+}
+#container{
+    border: 2px solid;
+}
+#container p{
+    background-color: blueviolet;
+}
+#container>p{
+    color: aqua;
+}
+button:hover{
+    color: red;
+}
+#p1:hover{
+    color: green;
+}
+li:nth-child(2n){
+    background-color: darkgreen;
+}
+#counter
+{
+    display: block;
+    text-align: left;
+    font-size: 3cm;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.numberbuttons
+{
+    padding: 10px 20px;
+    font-size: 1.5em;
+    color: bisque;
+    background-color: blue;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.25s;
+
+}
