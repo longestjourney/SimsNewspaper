@@ -1,69 +1,41 @@
-body{
-    background-color: wheat;
-}
-h1{
-    color: green;
-}
-h1::first-letter{
-    font-size: 2em;
-    font-style: italic;
-}
-p::selection{
-    color: darkcyan;
-    background-color: fuchsia;
-}
-#p1{
-    color:brown
-}
-#p1::first-line{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
+/*body{
+    background-image: url(Page1.png);
+    background-repeat: no-repeat;
+    
+}*/
 
-#p2{
-    color: blue;
-}
 
-.odd{
- background-color: yellow;
- margin: 10px
-}
-.even{
-    background-color: chartreuse;
-}
-#container{
-    border: 2px solid;
-}
-#container p{
-    background-color: blueviolet;
-}
-#container>p{
-    color: aqua;
-}
-button:hover{
-    color: red;
-}
-#p1:hover{
-    color: green;
-}
-li:nth-child(2n){
-    background-color: darkgreen;
-}
-#counter
-{
+#pages{
     display: block;
-    text-align: left;
-    font-size: 3cm;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    width: auto;
+    height: 100%;
+    overflow: auto;
+}
+img{
+        border: 1px solid black;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.numberbuttons
-{
-    padding: 10px 20px;
-    font-size: 1.5em;
-    color: bisque;
-    background-color: blue;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.25s;
 
+.controls{
+    display: block;
+    width: 150px;
+    height: 100vh;
+    background-color: rgb(94, 94, 143);
+}
+#lastpage{
+    text-align: center;
+    color: white;
+    padding-top: 35%;
+
+}
+#nextpage{
+    color: white;
+    text-align: center;
+    padding-top: 35%;
 }
